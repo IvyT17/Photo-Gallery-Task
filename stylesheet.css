@@ -1,0 +1,45 @@
+@media screen and (max-width: 768px) /* mobile size */
+{
+    .container
+    {
+        display:flex;
+        flex-direction:column;
+        grid-gap: 5px;
+    }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) /* tablet size */
+{
+    .container
+    {
+        display:grid;
+        grid-template-columns: repeat(2, 470px);
+        grid-template-rows: repeat(5, 300px);
+        grid-gap: 5px;
+    }
+}
+
+@media screen and (min-width: 1024px) /* laptop size */
+{
+    .container
+    {
+        display:grid;
+        grid-template-columns: repeat(3, 470px);
+        grid-template-rows: repeat(5, 300px);
+        grid-template-areas: 'a a b' 'a a c' 'd f g';
+        grid-gap: 5px;
+    }
+
+    #first /* first image will be bigger than the rest*/
+    {
+        width: 940px;
+        height: 600px;
+        grid-area: a;
+    } 
+}
+
+img
+{
+    width: 470px;
+    height: 300px;
+}
